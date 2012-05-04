@@ -1,1 +1,4 @@
 /* CSS declarations go here */
+body { font-size: 12px; font-family: helvetica, arial, verdana; }
+.listItems li { cursor: pointer; }
+.listItems li.selected { background: #99CCFF; }
