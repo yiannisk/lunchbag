@@ -1,8 +1,17 @@
-/* CSS declarations go here */
 body { 
 	margin: 0px;
 	font-size: 1.2em; 
 	font-family: helvetica, arial, verdana; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: .5%;
+	margin-bottom: .5%;
+}
+
+ul {
+	margin-top: 2%;
+	margin-bottom: 2%;
 }
 
 .listItems li { 
@@ -14,12 +23,19 @@ body {
 }
 
 .button { 
-	border: none; 
+	border: 2px solid #cccccc; 
 	background: black; 
 	color: white; 
 	font-size: 1.1em; 
 	padding-left: 12px; 
 	padding-right: 12px; 
+}
+
+.textbox {
+	border: 2px solid #cccccc;
+	font-size: 1.1em;
+	padding-left: 12px; 
+	padding-right: 12px;
 }
 
 .threeColumns {
@@ -28,24 +44,27 @@ body {
 }
 
 .threeColumns .colA {
-	width: 30%;
+	width: 26%;
 	height: 100%;
 	float: left;
 	background: #cccccc;
+	padding: 2%;
 }
 
 .threeColumns .colB {
-	width: 40%;
+	width: 36%;
 	height: 100%;
 	float: left;
 	background: #eeeeee;
+	padding: 2%;
 }
 
 .threeColumns .colC {
-	width: 30%;
+	width: 26%;
 	height: 100%;
 	float: right;
 	background: #666666;
+	padding: 2%;
 }
 
 .logoAndGreeting {
@@ -54,4 +73,8 @@ body {
 
 .listManager {
 	text-align: center;
+}
+
+.listContainer .title {
+	cursor: pointer;
 }

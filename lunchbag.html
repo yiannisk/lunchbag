@@ -22,28 +22,26 @@
   
   <div class="listManager">
 	  <input type="button" id="createList" name="createList" 
-		value="Create list" class="button"/>
+		value="New list" class="button"/>
   </div>
 </template>
 
 <template name="list">
-	<div id="list{{id}}">
-		<label for="title">Title</label>
-		<input type="text" name="title" id="title" value="{{title}}"/>
-		<br />
+	<div id="list{{id}}" class="listContainer">
+		<h2 class="title">{{title}}</h2>
 		<ul class='listItems'>
 		{{#each items}}
 			<li>{{text}}</li>
 		{{/each}}
 		</ul>
-		<label for="newItem">Add an item</label>
-		<input type="text" name="newItem" id="newItem" />
+		<input type="text" name="newItem" id="newItem" 
+			class="textbox" />
 		<input type="button" name="addItem" id="addItem" 
-			value="Add Item" class="button" />
+			value="Add" class="button" />
 		<br/>
 		<input type="button" name="deleteItem" id="deleteItem" 
-			class="button" value="Delete Item" />
+			class="button" value="Delete" />
 		<input type="button" name="clearList" id="clearList" 
-			class="button" value="Clear List" />
+			class="button" value="Clear" />
 	</div>
 </template>
