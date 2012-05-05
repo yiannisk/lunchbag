@@ -1,7 +1,17 @@
 /* CSS declarations go here */
-body { font-size: 1.2em; font-family: helvetica, arial, verdana; }
-.listItems li { cursor: pointer; }
-.listItems li.selected { background: #99CCFF; }
+body { 
+	margin: 0px;
+	font-size: 1.2em; 
+	font-family: helvetica, arial, verdana; 
+}
+
+.listItems li { 
+	cursor: pointer; 
+}
+
+.listItems li.selected { 
+	background: #99CCFF; 
+}
 
 .button { 
 	border: none; 
@@ -10,4 +20,30 @@ body { font-size: 1.2em; font-family: helvetica, arial, verdana; }
 	font-size: 1.1em; 
 	padding-left: 12px; 
 	padding-right: 12px; 
+}
+
+.threeColumns {
+	height: 600px;
+	width: 100%;
+}
+
+.threeColumns .colA {
+	width: 30%;
+	height: 100%;
+	float: left;
+	background: #cccccc;
+}
+
+.threeColumns .colB {
+	width: 40%;
+	height: 100%;
+	float: left;
+	background: #eeeeee;
+}
+
+.threeColumns .colC {
+	width: 30%;
+	height: 100%;
+	float: right;
+	background: #666666;
 }
