@@ -28,7 +28,8 @@ if (Meteor.is_client) {
 		  text: "Item 1"
 	  }]);
 	  
-	  Lists.insert(list);
+	  var found = Lists.findOne(list.id);
+	  if (found === undefined) Lists.insert(list);
 	  document.body.appendChild(Meteor.ui.render(function () {
 		  return Template.list(Lists.findOne({id: list.id}));
 	  }));
@@ -71,6 +72,22 @@ if (Meteor.is_client) {
 		  }
 		  
 		  $(obj.target).addClass("selected");
+	  },
+	  
+	  'click #deleteItem': function () {
+		  if ((".listItems .selected").length > 0) {
+			  var index = $(".listItems").find(".selected").index();
+			  log(index);
+			  if (index == -1) return;
+			  this.items.splice(index, 1);
+			  log(this.items);
+			  Lists.update({id: this.id}, this);
+		  }
+	  },
+	  
+	  'click #clearList': function () {
+		  this.items = [];
+		  Lists.update({id: this.id}, this);
 	  }
   };
 }
