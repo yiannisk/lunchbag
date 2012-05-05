@@ -30,9 +30,12 @@ if (Meteor.is_client) {
 	  
 	  var found = Lists.findOne(list.id);
 	  if (found === undefined) Lists.insert(list);
-	  document.body.appendChild(Meteor.ui.render(function () {
+	  
+	  var fragmentRenderer = function () { 
 		  return Template.list(Lists.findOne({id: list.id}));
-	  }));
+	  }
+	  
+	  $(Meteor.ui.render(fragmentRenderer)).appendTo(".colB");
     }
   };
   

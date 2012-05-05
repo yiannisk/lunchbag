@@ -47,3 +47,11 @@ body {
 	float: right;
 	background: #666666;
 }
+
+.logoAndGreeting {
+	text-align: center;
+}
+
+.listManager {
+	text-align: center;
+}

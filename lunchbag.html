@@ -14,11 +14,16 @@
 </body>
 
 <template name="hello">
-  <h1>Lunchbag</h1>
-  {{greeting}}
-  <br /><br />
-  <input type="button" id="createList" name="createList" 
-	value="Create list" class="button"/>
+  <div class="logoAndGreeting">
+	  <h1>Lunchbag</h1>
+	  {{greeting}}
+	  <br /><br />
+  </div>
+  
+  <div class="listManager">
+	  <input type="button" id="createList" name="createList" 
+		value="Create list" class="button"/>
+  </div>
 </template>
 
 <template name="list">

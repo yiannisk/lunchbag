@@ -15,6 +15,8 @@ A meteor sample under development.
 **Iteration 3 (Under development)**
  - 3 column layout with left column for lists, middle column for 
    selected list and right column for guides and social stuff.
+ - Textbox CSS formatting.
+ - As a user I want to be able to edit the title's list in place.
 
 **Iteration 4**:
  - As a user I want to be able to browse multiple lists in the left
