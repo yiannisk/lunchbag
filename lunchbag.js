@@ -14,7 +14,7 @@ function log() {
         console.log(arguments);
 }
 
-if (Meteor.is_client) {
+if (Meteor.isClient) {
     Template.hello.greeting = function () {
         return "Welcome to lunchbag.";
     };
@@ -36,12 +36,13 @@ if (Meteor.is_client) {
                 return Template.list(Lists.findOne({id: list.id}));
             }
 
-            $(Meteor.ui.render(fragmentRenderer)).appendTo(".colB");
+            $(Meteor.render(fragmentRenderer)).appendTo(".colB");
         }
     });
 
     Template.list.events({
         'click #addItem' : function () {
+            this.items = this.items || [];
             this.items.push({
                 text: document.getElementById("newItem").value
             });
@@ -122,7 +123,7 @@ if (Meteor.is_client) {
     });
 }
 
-if (Meteor.is_server) {
+if (Meteor.isServer) {
     Meteor.startup(function () {
         // server startup code here.
     });
